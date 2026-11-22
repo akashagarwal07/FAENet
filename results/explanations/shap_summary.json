@@ -1,0 +1,31 @@
+{
+  "top_risk": {
+    "OverTime": 0.042,
+    "MaritalStatus": 0.0287,
+    "JobRole": 0.0286,
+    "satisfaction_sum": 0.0283,
+    "JobSatisfaction": 0.0239,
+    "EnvironmentSatisfaction": 0.0232,
+    "promo_ratio": 0.0211,
+    "companies_per_year": 0.0207,
+    "log_MonthlyIncome": 0.0205,
+    "StockOptionLevel": 0.02
+  },
+  "top_uncertainty": {
+    "OverTime": 0.0279,
+    "JobRole": 0.024,
+    "MaritalStatus": 0.0219,
+    "satisfaction_sum": 0.0218,
+    "YearsSinceLastPromotion": 0.021,
+    "JobSatisfaction": 0.0196,
+    "promo_ratio": 0.0195,
+    "EnvironmentSatisfaction": 0.0185,
+    "log_MonthlyIncome": 0.0171,
+    "TrainingTimesLastYear": 0.0167
+  },
+  "additivity_max_err": {
+    "p": 2.980232727267662e-10,
+    "u": 2.7755575615628914e-17
+  },
+  "n_explained": 294
+}

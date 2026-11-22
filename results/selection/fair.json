@@ -1,0 +1,627 @@
+{
+  "rule": "floor PR>=base-0.02, guard ROC>=0.65 & pos-rate<=0.6, then min val gap (age+gender)",
+  "base": {
+    "cfg": {
+      "hidden_dims": [
+        32,
+        16
+      ],
+      "dropout": 0.1,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 64,
+      "max_epochs": 200,
+      "patience": 15,
+      "anneal_epochs": 10,
+      "lambda_r": 0.5,
+      "cw_power": 0.5,
+      "engineered": true,
+      "aug_mode": "none",
+      "aug_ratio": 0.5,
+      "lambda_f": 0.0,
+      "dro_eta": 0.0,
+      "dro_adj": 0.0,
+      "sel_kappa": 0.0,
+      "n_members": 5,
+      "min_pos": 3
+    },
+    "val_pr_auc": 0.6691436596527158,
+    "val_roc_auc": 0.8402143618272649,
+    "val_gap_age": 0.34700854700854705,
+    "val_gap_gender": 0.06332417582417582,
+    "val_pos_rate": 0.1493212669683258,
+    "val_recall": 0.6214689265536724
+  },
+  "families": {
+    "soft_tpr": {
+      "chosen": {
+        "cfg": {
+          "hidden_dims": [
+            32,
+            16
+          ],
+          "dropout": 0.1,
+          "lr": 0.001,
+          "weight_decay": 0.001,
+          "batch_size": 64,
+          "max_epochs": 200,
+          "patience": 15,
+          "anneal_epochs": 10,
+          "lambda_r": 0.5,
+          "cw_power": 0.5,
+          "engineered": true,
+          "aug_mode": "none",
+          "aug_ratio": 0.5,
+          "lambda_f": 30.0,
+          "dro_eta": 0.0,
+          "dro_adj": 0.0,
+          "sel_kappa": 0.0,
+          "n_members": 5,
+          "min_pos": 3
+        },
+        "val_pr_auc": 0.6492544550783117,
+        "val_roc_auc": 0.8360494595978466,
+        "val_gap_age": 0.2632478632478633,
+        "val_gap_gender": 0.06579670329670328,
+        "val_pos_rate": 0.14841628959276018,
+        "val_recall": 0.6045197740112994
+      },
+      "n_passing": 4,
+      "n": 4
+    },
+    "group_dro": {
+      "chosen": {
+        "cfg": {
+          "hidden_dims": [
+            32,
+            16
+          ],
+          "dropout": 0.1,
+          "lr": 0.001,
+          "weight_decay": 0.001,
+          "batch_size": 64,
+          "max_epochs": 200,
+          "patience": 15,
+          "anneal_epochs": 10,
+          "lambda_r": 0.5,
+          "cw_power": 0.0,
+          "engineered": true,
+          "aug_mode": "none",
+          "aug_ratio": 0.5,
+          "lambda_f": 0.0,
+          "dro_eta": 0.01,
+          "dro_adj": 0.0,
+          "sel_kappa": 0.0,
+          "n_members": 5,
+          "min_pos": 3
+        },
+        "val_pr_auc": 0.6499211032964927,
+        "val_roc_auc": 0.8367671357993938,
+        "val_gap_age": 0.29230769230769227,
+        "val_gap_gender": 0.05288461538461542,
+        "val_pos_rate": 0.13665158371040723,
+        "val_recall": 0.5819209039548022
+      },
+      "n_passing": 1,
+      "n": 6
+    },
+    "fair_select": {
+      "chosen": {
+        "cfg": {
+          "hidden_dims": [
+            32,
+            16
+          ],
+          "dropout": 0.1,
+          "lr": 0.001,
+          "weight_decay": 0.001,
+          "batch_size": 64,
+          "max_epochs": 200,
+          "patience": 15,
+          "anneal_epochs": 10,
+          "lambda_r": 0.5,
+          "cw_power": 0.5,
+          "engineered": true,
+          "aug_mode": "none",
+          "aug_ratio": 0.5,
+          "lambda_f": 0.0,
+          "dro_eta": 0.0,
+          "dro_adj": 0.0,
+          "sel_kappa": 0.5,
+          "n_members": 5,
+          "min_pos": 3
+        },
+        "val_pr_auc": 0.6538301044269318,
+        "val_roc_auc": 0.8346355572162023,
+        "val_gap_age": 0.35213675213675216,
+        "val_gap_gender": 0.004258241758241743,
+        "val_pos_rate": 0.14027149321266968,
+        "val_recall": 0.5819209039548022
+      },
+      "n_passing": 2,
+      "n": 4
+    }
+  },
+  "all": [
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6691436596527158,
+      "val_roc_auc": 0.8402143618272649,
+      "val_gap_age": 0.34700854700854705,
+      "val_gap_gender": 0.06332417582417582,
+      "val_pos_rate": 0.1493212669683258,
+      "val_recall": 0.6214689265536724
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 1.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6658080083434562,
+      "val_roc_auc": 0.8381429816913688,
+      "val_gap_age": 0.3162393162393163,
+      "val_gap_gender": 0.05686813186813189,
+      "val_pos_rate": 0.14570135746606336,
+      "val_recall": 0.6101694915254238
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 3.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.662046979709971,
+      "val_roc_auc": 0.8376735721897012,
+      "val_gap_age": 0.3162393162393163,
+      "val_gap_gender": 0.06579670329670328,
+      "val_pos_rate": 0.14751131221719457,
+      "val_recall": 0.6045197740112994
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 10.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6536000586487811,
+      "val_roc_auc": 0.8352793346341734,
+      "val_gap_age": 0.2632478632478633,
+      "val_gap_gender": 0.08365384615384619,
+      "val_pos_rate": 0.13936651583710408,
+      "val_recall": 0.5932203389830508
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 30.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6492544550783117,
+      "val_roc_auc": 0.8360494595978466,
+      "val_gap_age": 0.2632478632478633,
+      "val_gap_gender": 0.06579670329670328,
+      "val_pos_rate": 0.14841628959276018,
+      "val_recall": 0.6045197740112994
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.0,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.01,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6499211032964927,
+      "val_roc_auc": 0.8367671357993938,
+      "val_gap_age": 0.29230769230769227,
+      "val_gap_gender": 0.05288461538461542,
+      "val_pos_rate": 0.13665158371040723,
+      "val_recall": 0.5819209039548022
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.0,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.01,
+        "dro_adj": 1.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6468885127156894,
+      "val_roc_auc": 0.8375169178394983,
+      "val_gap_age": 0.3094017094017094,
+      "val_gap_gender": 0.030082417582417587,
+      "val_pos_rate": 0.15746606334841629,
+      "val_recall": 0.6271186440677966
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.0,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.05,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6311927623569284,
+      "val_roc_auc": 0.8349239562142788,
+      "val_gap_age": 0.27008547008547007,
+      "val_gap_gender": 0.050412087912087844,
+      "val_pos_rate": 0.14570135746606336,
+      "val_recall": 0.5988700564971752
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.0,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.05,
+        "dro_adj": 1.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6275103756982624,
+      "val_roc_auc": 0.8348169828814991,
+      "val_gap_age": 0.20341880341880342,
+      "val_gap_gender": 0.023626373626373653,
+      "val_pos_rate": 0.15565610859728507,
+      "val_recall": 0.615819209039548
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.0,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.2,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6225566998735246,
+      "val_roc_auc": 0.8277152267474847,
+      "val_gap_age": 0.3282051282051282,
+      "val_gap_gender": 0.00027472527472527375,
+      "val_pos_rate": 0.13755656108597286,
+      "val_recall": 0.5536723163841808
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.0,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.2,
+        "dro_adj": 1.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6226279620898956,
+      "val_roc_auc": 0.8342436445662251,
+      "val_gap_age": 0.22393162393162397,
+      "val_gap_gender": 0.031043956043956045,
+      "val_pos_rate": 0.1429864253393665,
+      "val_recall": 0.5649717514124294
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.25,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6612595791519509,
+      "val_roc_auc": 0.8377736261607229,
+      "val_gap_age": 0.3675213675213675,
+      "val_gap_gender": 0.04395604395604402,
+      "val_pos_rate": 0.13574660633484162,
+      "val_recall": 0.5875706214689266
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.5,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6538301044269318,
+      "val_roc_auc": 0.8346355572162023,
+      "val_gap_age": 0.35213675213675216,
+      "val_gap_gender": 0.004258241758241743,
+      "val_pos_rate": 0.14027149321266968,
+      "val_recall": 0.5819209039548022
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 1.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6393416691722218,
+      "val_roc_auc": 0.828750916815433,
+      "val_gap_age": 0.35213675213675216,
+      "val_gap_gender": 0.046428571428571375,
+      "val_pos_rate": 0.13936651583710408,
+      "val_recall": 0.5706214689265536
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 2.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6057562229284753,
+      "val_roc_auc": 0.8157852783659235,
+      "val_gap_age": 0.3965811965811966,
+      "val_gap_gender": 0.0692307692307692,
+      "val_pos_rate": 0.1321266968325792,
+      "val_recall": 0.5254237288135594
+    }
+  ]
+}

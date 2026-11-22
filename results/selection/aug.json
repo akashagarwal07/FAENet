@@ -1,0 +1,197 @@
+{
+  "rule": "max pooled validation PR-AUC",
+  "best": {
+    "cfg": {
+      "hidden_dims": [
+        32,
+        16
+      ],
+      "dropout": 0.1,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "batch_size": 64,
+      "max_epochs": 200,
+      "patience": 15,
+      "anneal_epochs": 10,
+      "lambda_r": 0.5,
+      "cw_power": 0.5,
+      "engineered": true,
+      "aug_mode": "none",
+      "aug_ratio": 0.5,
+      "lambda_f": 0.0,
+      "dro_eta": 0.0,
+      "dro_adj": 0.0,
+      "sel_kappa": 0.0,
+      "n_members": 5,
+      "min_pos": 3
+    },
+    "val_pr_auc": 0.6691436596527158,
+    "val_roc_auc": 0.8402143618272649,
+    "val_gap_age": 0.34700854700854705,
+    "val_gap_gender": 0.06332417582417582,
+    "val_pos_rate": 0.1493212669683258,
+    "val_recall": 0.6214689265536724
+  },
+  "all": [
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "none",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6691436596527158,
+      "val_roc_auc": 0.8402143618272649,
+      "val_gap_age": 0.34700854700854705,
+      "val_gap_gender": 0.06332417582417582,
+      "val_pos_rate": 0.1493212669683258,
+      "val_recall": 0.6214689265536724
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "smote",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6498230819498726,
+      "val_roc_auc": 0.8347488963617996,
+      "val_gap_age": 0.3094017094017094,
+      "val_gap_gender": 0.06332417582417582,
+      "val_pos_rate": 0.15656108597285068,
+      "val_recall": 0.6214689265536724
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "smote",
+        "aug_ratio": 1.0,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.647765284987446,
+      "val_roc_auc": 0.8314955508503896,
+      "val_gap_age": 0.3025641025641026,
+      "val_gap_gender": 0.0851648351648352,
+      "val_pos_rate": 0.1665158371040724,
+      "val_recall": 0.6384180790960452
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "cell_smote",
+        "aug_ratio": 0.5,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6474864950630842,
+      "val_roc_auc": 0.8306351974093908,
+      "val_gap_age": 0.32991452991452996,
+      "val_gap_gender": 0.046428571428571375,
+      "val_pos_rate": 0.13122171945701358,
+      "val_recall": 0.5706214689265536
+    },
+    {
+      "cfg": {
+        "hidden_dims": [
+          32,
+          16
+        ],
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "batch_size": 64,
+        "max_epochs": 200,
+        "patience": 15,
+        "anneal_epochs": 10,
+        "lambda_r": 0.5,
+        "cw_power": 0.5,
+        "engineered": true,
+        "aug_mode": "cell_smote",
+        "aug_ratio": 1.0,
+        "lambda_f": 0.0,
+        "dro_eta": 0.0,
+        "dro_adj": 0.0,
+        "sel_kappa": 0.0,
+        "n_members": 5,
+        "min_pos": 3
+      },
+      "val_pr_auc": 0.6209971847280077,
+      "val_roc_auc": 0.8213484452194131,
+      "val_gap_age": 0.2564102564102564,
+      "val_gap_gender": 0.0017857142857142794,
+      "val_pos_rate": 0.15475113122171946,
+      "val_recall": 0.5988700564971752
+    }
+  ]
+}

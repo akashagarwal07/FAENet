@@ -1,0 +1,39 @@
+# FAENet final configuration. Full per-variant settings: results/variants.json
+model: faenet
+description: Final FAENet configuration (selected on validation folds only)
+architecture:
+  hidden_dims:
+  - 32
+  - 16
+  dropout: 0.1
+  activation: ReLU
+  evidence: softplus
+  ensemble_members: 5
+  ensemble: cross-fitted (5 inner folds)
+training:
+  optimizer: AdamW
+  lr: 0.001
+  weight_decay: 0.001
+  batch_size: 64
+  max_epochs: 200
+  patience: 15
+  early_stopping: validation PR-AUC (after KL annealing)
+  kl_weight: 0.5
+  kl_anneal_epochs: 10
+  class_weight_exponent: 0.5
+  engineered_features: true
+fairness:
+  sensitive_attributes:
+  - gender
+  - age_band
+  used_as_inputs: false
+  equal_opportunity_penalty_lambda: 30.0
+  decision: age-aware thresholds fitted on validation (equal TPR target)
+review:
+  score: evidential uncertainty u = 2/S
+  budget: 0.1
+  thresholds: per age band (validation quantile)
+evaluation:
+  protocol: 5x5 repeated stratified CV (attrition x gender x age band)
+  validation_fraction: 0.15
+  bootstrap: 500 employee-level resamples, paired

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "FAENet: A Fairness-Aware Evidential Neural Network with Uncertainty-Based Human Review for Employee Attrition Prediction"
+authors:
+  - family-names: Varshney
+    given-names: Lakshya
+  - family-names: Agarwal
+    given-names: Akash
+repository-code: "https://github.com/akashagarwal07/FAENet"
+version: 1.0.0
+date-released: 2026-11-23
